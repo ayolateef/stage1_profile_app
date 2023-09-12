@@ -17,31 +17,33 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
         title: const Text("My CV"),
       ),
-      body: Center(
-        child: Container(
-          margin: const EdgeInsets.symmetric(
-            vertical: 40,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              CVInfoWidget(cv: cv),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => EditCVScreen(),
-                      ),
-                    );
-                  },
-                  child: const Text("Edit CV"),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Container(
+            margin: const EdgeInsets.symmetric(
+              vertical: 40,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                CVInfoWidget(cv: cv),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => EditCVScreen(),
+                        ),
+                      );
+                    },
+                    child: const Text("Edit CV"),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

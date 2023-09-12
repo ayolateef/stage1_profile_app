@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import 'data_model.dart';
 
 class EditCVScreen extends StatefulWidget {
+  const EditCVScreen({super.key});
+
   @override
   _EditCVScreenState createState() => _EditCVScreenState();
 }
@@ -13,6 +15,7 @@ class _EditCVScreenState extends State<EditCVScreen> {
   final TextEditingController slackUsernameController = TextEditingController();
   final TextEditingController githubHandleController = TextEditingController();
   final TextEditingController bioController = TextEditingController();
+  String? slackProfileImageUrl;
 
   @override
   void initState() {
@@ -22,6 +25,7 @@ class _EditCVScreenState extends State<EditCVScreen> {
     slackUsernameController.text = cv.slackUsername;
     githubHandleController.text = cv.githubHandle;
     bioController.text = cv.bio;
+    slackProfileImageUrl = cv.slackProfileImageUrl;
   }
 
   @override
@@ -46,21 +50,21 @@ class _EditCVScreenState extends State<EditCVScreen> {
               ),
               TextField(
                 controller: slackUsernameController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     labelText: "Slack Username",
                     labelStyle:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
               ),
               TextField(
                 controller: githubHandleController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     labelText: "GitHub Handle",
                     labelStyle:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
               ),
               TextField(
                 controller: bioController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     labelText: "Bio",
                     labelStyle:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
@@ -73,13 +77,13 @@ class _EditCVScreenState extends State<EditCVScreen> {
                     slackUsername: slackUsernameController.text,
                     githubHandle: githubHandleController.text,
                     bio: bioController.text,
-                    slackProfileImageUrl: '',
+                    slackProfileImageUrl: slackProfileImageUrl ?? '',
                   );
                   Provider.of<CVProvider>(context, listen: false)
                       .updateCVData(updatedCV);
                   Navigator.pop(context);
                 },
-                child: Text("Save"),
+                child: const Text("Save"),
               ),
             ],
           ),
