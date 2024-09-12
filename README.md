@@ -1,21 +1,28 @@
+
 # profile_app
 
-A new Flutter project.
+![App Screenshot](app_screenshot.png) <!-- Add an image to represent your app -->
+
+## Overview
+
+Profile App is a Flutter-based mobile application that serves as a comprehensive CV, showcasing personal and professional details. This app allows users to view and edit their CV information conveniently.
+
+## Features
+
+- Display personal details, including full name, Slack username, and GitHub handle.
+- Showcase a brief personal bio.
+- Edit CV particulars through a user-friendly interface.
+- Real-time updates ensure changes are immediately reflected on the CV view.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+- Flutter and Dart should be installed. You can install them by following the official [Flutter installation guide](https://flutter.dev/docs/get-started/install).
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# profile_app
-# stage1_profile_app
-# stage1_profile_app
-# stage1_profile_app
-# profile_app
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/ayolateef/profile_app.git
